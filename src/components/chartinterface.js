@@ -434,7 +434,7 @@ const ChatInterface = () => {
           </button>
           <div className="flex justify-between items-center w-full">
             <h1 className="text-white font-bold text-3xl">
-              <span className="text-sky-400">Go</span>Fr-GPT
+              <span className="text-sky-400">Go</span>Fr-Genie
             </h1>
             <a href="https://zop.dev/" target="_blank">
               <p className="text-white text-sm -mb-1 italic text-right">
