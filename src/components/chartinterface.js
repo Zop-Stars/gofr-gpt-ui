@@ -9,6 +9,17 @@ import { Highlight, Prism } from "prism-react-renderer";
 import bashLang from "refractor/lang/bash";
 bashLang(Prism);
 
+function transformChat(input, prompt) {
+  if (input.language == 0) {
+    return [{ role: "user", text: prompt }];
+  }
+  const arr = input.map(({ text, isUser }) => ({
+    role: isUser ? "user" : "model",
+    text: text,
+  }));
+  return [...arr, { role: "user", text: prompt }];
+}
+
 const CodeBlock = ({ children, className }) => {
   const [isCopied, setIsCopied] = useState(false);
   const language = className?.replace(/language-/, "") || "";
@@ -173,9 +184,7 @@ const ChatInterface = () => {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({
-            prompt: prompt,
-          }),
+          body: JSON.stringify(transformChat(messages, prompt)),
           signal: controller.signal,
         }
       );
