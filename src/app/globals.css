@@ -19,3 +19,231 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+pre[class*="language-"] {
+  color: theme("colors.slate.50");
+}
+
+.token.tag,
+.token.class-name,
+.token.selector,
+.token.selector .class,
+.token.selector.class,
+.token.function {
+  color: theme("colors.pink.400");
+}
+
+.token.attr-name,
+.token.keyword,
+.token.rule,
+.token.pseudo-class,
+.token.important {
+  color: theme("colors.slate.300");
+}
+
+.token.module {
+  color: theme("colors.pink.400");
+}
+
+.token.attr-value,
+.token.class,
+.token.string,
+.token.property {
+  color: theme("colors.sky.300");
+}
+
+.token.punctuation,
+.token.attr-equals {
+  color: theme("colors.slate.500");
+}
+
+.token.unit,
+.language-css .token.function {
+  color: theme("colors.teal.200");
+}
+
+.token.comment,
+.token.operator,
+.token.combinator {
+  color: theme("colors.slate.400");
+}
+
+code {
+  background-color: var(--tw-prose-background);
+  padding: 1px 2px;
+  border-radius: 3px;
+  margin-right: 2px;
+}
+
+code::before {
+  content: none !important;
+}
+
+code::after {
+  content: none !important;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1536px;
+  margin-inline: auto;
+  position: relative;
+  height: 100px;
+  margin-top: 5rem;
+  overflow: hidden;
+}
+
+@keyframes scrollLeft {
+  to {
+    left: -158px;
+  }
+}
+
+.wrapper:hover .item {
+  animation-play-state: paused; /* Pause the animation for all items on hover */
+}
+
+.item {
+  border-radius: 6px;
+  position: absolute;
+  left: max(calc(158px * 10), 100%);
+  animation-name: scrollLeft;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-play-state: running; /* Ensure the animation runs by default */
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+pre[class*="language-"] {
+  color: theme("colors.slate.50");
+}
+
+.token.tag,
+.token.class-name,
+.token.selector,
+.token.selector .class,
+.token.selector.class,
+.token.function {
+  color: theme("colors.pink.400");
+}
+
+.token.attr-name,
+.token.keyword,
+.token.rule,
+.token.pseudo-class,
+.token.important {
+  color: theme("colors.slate.300");
+}
+
+.token.module {
+  color: theme("colors.pink.400");
+}
+
+.token.attr-value,
+.token.class,
+.token.string,
+.token.property {
+  color: theme("colors.sky.300");
+}
+
+.token.punctuation,
+.token.attr-equals {
+  color: theme("colors.slate.500");
+}
+
+.token.unit,
+.language-css .token.function {
+  color: theme("colors.teal.200");
+}
+
+.token.comment,
+.token.operator,
+.token.combinator {
+  color: theme("colors.slate.400");
+}
+
+code {
+  background-color: var(--tw-prose-background);
+  padding: 1px 2px;
+  border-radius: 3px;
+  margin-right: 2px;
+}
+
+code::before {
+  content: none !important;
+}
+
+code::after {
+  content: none !important;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1536px;
+  margin-inline: auto;
+  position: relative;
+  height: 100px;
+  margin-top: 5rem;
+  overflow: hidden;
+}
+
+@keyframes scrollLeft {
+  to {
+    left: -158px;
+  }
+}
+
+.wrapper:hover .item {
+  animation-play-state: paused; /* Pause the animation for all items on hover */
+}
+
+.item {
+  border-radius: 6px;
+  position: absolute;
+  left: max(calc(158px * 10), 100%);
+  animation-name: scrollLeft;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-play-state: running; /* Ensure the animation runs by default */
+}
+
+@keyframes borderAnimation {
+  0% {
+    border-color: #06b6d4; /* Starting cyan color */
+  }
+  20% {
+    border-color: #3bf68f; /* Midway color */
+  }
+  50% {
+    border-color: #3b82f6; /* Midway color */
+  }
+  70% {
+    border-color: #f6803b; /* Midway color */
+  }
+  100% {
+    border-color: #06b6d4; /* Ending cyan color */
+  }
+}
+
+.animate-border {
+  animation: borderAnimation 3s infinite; /* Animates border color every 3 seconds */
+}
