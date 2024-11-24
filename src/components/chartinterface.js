@@ -48,7 +48,7 @@ const CodeBlock = ({ children, className }) => {
       {({ className: highlightClassName, style, tokens, getTokenProps }) => (
         <div className="relative">
           <pre
-            className={`${highlightClassName} bg-gray-900 rounded-lg p-4 flex overflow-x-auto`}
+            className={`${highlightClassName} bg-gray-900 rounded-lg p-4 flex overflow-x-auto pt-6`}
             style={style}
           >
             <code className="flex-1">
@@ -62,7 +62,7 @@ const CodeBlock = ({ children, className }) => {
             </code>
             <button
               onClick={handleCopy}
-              className="ml-4 flex items-center justify-center text-gray-500 hover:text-gray-300 transition duration-300"
+              className="ml-4 flex items-start justify-center text-gray-500 hover:text-gray-300 transition duration-300"
               title={isCopied ? "Copied!" : "Copy"}
             >
               {isCopied ? (
